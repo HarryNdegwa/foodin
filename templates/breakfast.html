@@ -1,0 +1,16 @@
+{% for meal in meals %}
+<div style="display: flex; flex-direction:column;" class="main-meal">
+    <div class="meal">
+        <img src="{{ meal.image.url }}" alt="">
+    </div>
+    <div class="price-name">
+        <h4>Only Ksh.{{ meal.price }}</h4>
+        <h6>{{ meal.name }}</h6>
+    </div>
+</div>
+{% endfor %}
+<div class="text-center" style="height:80px; width:100%;">
+    <div class="l_link">
+        <a href="#" class="btn btn-md" id="load-btn">Load More</a>
+    </div>
+</div>

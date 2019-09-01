@@ -1,0 +1,414 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+body{
+    position: relative;
+    min-height:100vh;
+    padding-bottom: 180px;
+}
+
+
+
+#navbar{
+    display: flex;
+    padding:0px 100px;
+    height:60px;
+    width:100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.brand{
+    flex:3;
+    font-weight: bolder;
+    font-size:30px;
+}
+
+.nav-links{
+    display: flex;
+    flex:2;
+    height:100%;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    margin:0px;
+}
+
+.link a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.active-link::after{
+    content:'';
+    display: block;
+    height:3px;
+    width:100%;
+    background-color: orange;
+}
+
+
+
+#intro{
+    background-image:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.9)), url(../img/bg1.jpg);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height:80vh;
+}
+
+.intro{
+    display: flex;
+    height:80vh;
+    align-items: center;
+}
+
+.menu-btn,.contact-btn,.offer-btn,#r-btn,#c-btn,#com-btn,#load-btn{
+    background-color: orange;
+    color:#fff;
+}
+
+#r-btn,#c-btn,#com-btn{
+    border:none;
+}
+
+.order-btn{
+    border:1px solid orange;
+    color:white;
+}
+
+.order-btn:hover{
+    background-color: white;
+    color:orange;
+}
+
+.mini-main{
+    width:75%;
+    margin:auto;
+}
+
+.box-section{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box{
+    height:200px;
+    width:46%;
+    margin-bottom:5px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    box-shadow: 1px 1px 2px 1px #ccc;
+    padding:6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#about{
+    height:250px;
+    background-image:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)), url(../img/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+}
+
+.meal-links{
+    display: flex;
+    margin:0px;
+    width:100%;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.meal-links li a{
+    color:inherit;
+    text-decoration: none;
+}
+
+.active-meal{
+    color:orange !important;
+    font-weight: bold;
+}
+
+#message-field,#enq-field,#com-field{
+    height:50px;
+}
+
+.s_meals{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.meal{
+    width:200px;
+    height:230px;
+    padding-top:20px;
+    margin:0px 10px;
+    overflow:hidden;
+}
+
+.meal img{
+    width:100%;
+    height:100%;
+    transition:transform 3s ease-in-out;
+}
+
+.meal img:hover{
+    transform: scale(1.5);
+}
+
+#load-btn{
+    position: absolute;
+    bottom:10px;
+    left:10px;
+    margin-top:20px;
+}
+
+.r_field,#com-field{
+    border:none;
+    border-radius: 0px;
+    border-bottom:1px solid #ccc;
+    background-color: transparent;
+}
+
+#com-field{
+    box-shadow: none;
+}
+
+.asteriskField{
+    color:orange;
+}
+
+.field{
+    width:350px;
+}
+
+#reservation{
+    background-image:linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)), url(../img/bg1.jpg);
+}
+
+#offer{
+    width:60%;
+    margin: auto;
+}
+
+.offer{
+    height:400px;
+    position: relative;
+    width:300px;
+}
+
+.offer-slide{
+    height:250px;
+    width:75%;
+    position: absolute;
+    top:-40px;
+    left:50%;
+    margin-left:-112.5px;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 1px #ccc;
+    transition: transform .5s ease-in;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.offer-slide:hover{
+    transform:translate3d(0px,20px,0px);
+}
+
+#offer1{
+    background-image: url(../img/bg1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#offer2{
+    background-image:url(../img/bg2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+/* .meals{
+    min-height:400px;
+} */
+
+#home-meal{
+    height:300px;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)), url(../img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+footer{
+    position: absolute;
+    background-color: #000;
+    bottom:0px;
+    left:0px;
+    width:100%;
+    min-height: 150px;
+}
+
+.icon{
+    color:orange;
+    margin:0px 10px;
+}
+
+/* .modal{
+    width:70%;
+} */
+
+@media screen and (max-width:1200px){
+   #intro,.intro{
+       height: 50vh;
+   }
+
+
+   .mini-main{
+    width:90%;
+    margin:auto;
+    }
+
+}
+
+@media screen and (max-width:768px){
+
+    .brand{
+        flex:2;
+    }
+
+
+    .nav-links{
+        flex: 3;
+    }
+
+    #intro,.intro{
+        height: 60vh;
+    }
+
+
+    .mini-main{
+        width:100%;
+        margin:auto;
+    }
+
+    .meal{
+        width:230px;
+        height:230px;
+        padding-top:20px;
+        margin:0px 10px;
+    }
+
+    .field{
+        width:250px;
+    }
+
+    #offer{
+        width:80%;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width:420px){
+    #navbar{
+        padding:0px 10px;
+        justify-content: space-between;
+        position:relative;
+        top:0px;
+        left:0px;
+    }
+
+    .nav-links{
+        display: none;
+    }
+
+    .link{
+        margin:5px 0px;
+    }
+
+    .slink-active{
+        color:orange;
+    }
+
+    .active-link::after{
+        content:none;     
+    }
+
+    .menu{
+        height:35px;
+        width:35px;
+    }
+
+    .bar{
+        width:100%;
+        border-radius: 3px;
+        height:4px;
+        background-color: orange;
+        margin-bottom:7px;
+    }
+
+    .menu>.bar:last-child{
+        margin-bottom: none;
+    }
+
+
+
+    #intro,.intro{
+        height: 80vh;
+    }
+
+    .mini-main{
+        width:90%;
+        margin:auto;
+    }
+
+    .box{
+        height:250px;
+        width:80%;  
+    }
+
+    .meal{
+        width:300px;
+        height:300px;
+        padding-top:20px;
+        margin:10px auto;
+    }
+
+    .main-meal{
+        margin: auto;
+    }
+
+    .field{
+        width:90vw;
+        margin:auto;
+    }
+
+    .offer{
+        width:95%;
+    }
+
+    #offer1{
+        margin-bottom: 50px !important;
+    }
+
+    .home h4,.offer-head h3{
+        font-size: 20px;
+    }
+}
